@@ -13,7 +13,7 @@ function ProviderClient(url) {
 
 
 ProviderClient.prototype.fetchAlligatorByName = function(name, callback) {
-  var headers = {'Accept' : 'application/json'};
+  var headers = {'Accept' : '*/*'};
 
   request.get({url: this.url + '/foos', headers: headers}, function(err, response, body) {
     this.results = JSON.parse(response.body);
